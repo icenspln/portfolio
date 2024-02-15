@@ -25,3 +25,8 @@ h6 {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
+.border-gradient {
+  border-image: linear-gradient(140.99deg, #D7A3FF 0%, #AC42FF 100%);
+  border-image-slice: 1;
+}
