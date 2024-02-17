@@ -6,11 +6,11 @@
 @tailwind utilities;
 
 body {
-  font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #fff;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
 }
 
 h1,
@@ -19,14 +19,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Kalnia", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-family: "Kalnia", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.into--custom-height {
+    height: calc(100dvh - 63px);
 }
 
 .border-gradient {
-  border-image: linear-gradient(140.99deg, #D7A3FF 0%, #AC42FF 100%);
-  border-image-slice: 1;
+    border-image: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+    border-image-slice: 1;
 }
