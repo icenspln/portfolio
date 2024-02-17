@@ -13,6 +13,11 @@ body {
     background-color: #fff;
 }
 
+p {
+    font-weight: 400;
+    size: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -21,16 +26,36 @@ h5,
 h6 {
     font-family: "Kalnia", serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
 
 .into--custom-height {
-    height: calc(100dvh - 63px);
+    min-height: calc(100dvh - 63px);
 }
 
 .border-gradient {
     border-image: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
     border-image-slice: 1;
+}
+
+.gradient-text-purple {
+    background: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-border-purple {
+    background: linear-gradient(140.99deg, #d7a3ff 0%, #ac42ff 100%);
+}
+
+.intro--scroll-down {
+    position: absolute;
+    left: 10%;
+    bottom: 87px;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    width: 200px;
+    border-bottom: 2px solid;
 }
