@@ -1,6 +1,8 @@
 import Intro from "./intro"
 import Navbar from "./navbar"
-// import Testimonials from "./testimonials"
+import Testimonials from "./testimonials"
+import FormAnimation from "./form"
+import Experience from "./experience"
 
 export default function Page() {
     return (
@@ -9,6 +11,9 @@ export default function Page() {
             <section className="">
                 <Navbar />
                 <Intro />
+                <Experience />
+                <Testimonials />
+                <FormAnimation />
                 {/* <Testimonials /> */}
             </section>
         </main>
