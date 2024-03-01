@@ -4,7 +4,7 @@ import Navbar from "./navbar"
 
 export default function Page() {
     return (
-        <main className="mx-2 sm:mx-3 px-2 ">
+        <main className="mx-2 sm:mx-3 md:mx-12 xl:mx-20 px-2 ">
             {/* intro section:: */}
             <section className="">
                 <Navbar />
