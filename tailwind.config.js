@@ -12,8 +12,9 @@ module.exports = {
         extend: {
             colors: {
                 grayText: "#686868",
-                gradientPurple:
-                    "linear-gradient(140.99deg, #D7A3FF 0%, #AC42FF 100%)",
+                dark: "#111111",
+                red: "#F05539",
+                purple: "#C172FF",
             },
             backgroundImage: {
                 gradientPurple:

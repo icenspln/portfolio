@@ -3,7 +3,9 @@ const Navbar = () => {
         <nav className="hidden md:block my-4 text-grayText">
             <ul className="flex gap-5 w-full justify-center text-base">
                 <li>
-                    <a href="#">portfolio</a>
+                    <a href="#" className="text-white">
+                        portfolio
+                    </a>
                 </li>
                 <li>
                     <a href="#">tech</a>

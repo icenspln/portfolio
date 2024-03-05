@@ -3,7 +3,7 @@ export default function Intro() {
         <div className="into into--custom-height flex items-center relative">
             <article className="w-full flex flex-col lg:flex-row gap-5 items-center  justify-between">
                 <div className="w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center lg:text-left w-full">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center lg:text-left w-full text-white">
                         Merouane Boukandoura.
                     </h1>
                     <div className="h-2 w-11 bg-gradientPurple rounded"></div>
@@ -21,7 +21,9 @@ export default function Intro() {
                     alt="me"
                 />
                 <div className="max-w-full md:w-96 text-center lg:text-start">
-                    <h2 className="text-xl">Backend & Mobile developer</h2>
+                    <h2 className="text-xl text-white">
+                        Backend & Mobile developer
+                    </h2>
                     <p className="text-grayText text-sm mb-3">
                         Lorem ipsum dolor sit amet consectetur. Velit egestas
                         sed fermentum lobortis dui. Vitae sit d vel. Massa id

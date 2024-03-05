@@ -4,18 +4,17 @@ import Testimonials from "./testimonials"
 import FormAnimation from "./form"
 import Experience from "./experience"
 
+import Cont from "./cont"
 export default function Page() {
     return (
-        <main className="mx-2 sm:mx-3 md:mx-12 xl:mx-20 px-2 ">
-            {/* intro section:: */}
-            <section className="">
+        <>
+            <Cont>
                 <Navbar />
                 <Intro />
-                <Experience />
-                <Testimonials />
-                <FormAnimation />
-                {/* <Testimonials /> */}
-            </section>
-        </main>
+            </Cont>
+            <Experience />
+            {/* <Testimonials /> */}
+            <FormAnimation />
+        </>
     )
 }
