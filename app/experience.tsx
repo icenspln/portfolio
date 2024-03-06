@@ -2,45 +2,46 @@ import React from "react"
 import Cont from "./cont"
 
 const Card = ({ title, number }) => (
-    <div className="w-44 h-22 border border-gray-300 rounded-lg p-2 flex flex-col items-center justify-center m-4">
-        <span className="text-4xl font-medium text-white kalnia-font">
+    <div className="w-[193px] h-[98px] rounded-lg border-solid  border-white border p-2 flex flex-col items-center justify-center m-4 bg-linearBlack">
+        <span className="text-[48px]  text-white font-kalnia leading-10">
             +{number}
         </span>
-        <span className="text-sm text-left text-gray-500 font-dosis">
-            {title}
-        </span>
+        <span className="text-left text-grayText font-dosis">{title}</span>
     </div>
 )
 
 const SectionItem = ({ title, description }) => (
-    <div className="mb-4">
-        <h3 className="text-lg font-medium mb-1 text-white kalnia-font">
-            -{title}
-        </h3>
-        <p className="text-base text-gray-600 font-dosis">{description}</p>
+    <div className="flex justify-start items-start gap-3 mb-2">
+        <div>
+            <img className="mt-3.5" src="/-.svg" alt="-" />
+        </div>
+        <div>
+            <h3 className="text-lg text-white font-Dosis">{title}</h3>
+            <p className="text-grayText font-Dosis">{description}</p>
+        </div>
     </div>
 )
 
 const Experience = () => (
     <div
-        className="flex flex-col items-center justify-start py-10"
+        className="flex flex-col items-center justify-start py-20" // give the same vertical padding to all sections
         style={{
             background:
                 "linear-gradient(103.02deg, #2E2E2E 0%, #222222 81.17%)", // bro.. we have tailwind...
         }}
     >
         <Cont>
-            <div className="flex justify-center mb-8 flex-wrap">
+            <div className="flex justify-center flex-wrap">
                 <Card title="Successful Projects" number={30} />
                 <Card title="Years of Experience" number={4} />
                 <Card title="Worldwide Clients" number={10} />
             </div>
             <div
-                className="grid grid-cols-2 gap-16 mt-12"
+                className="grid grid-cols-2 gap-16 my-12"
                 style={{ gridTemplateColumns: "1fr 1fr" }}
             >
                 <div>
-                    <h1 className="text-4xl font-medium mb-4 text-white  kalnia-font">
+                    <h1 className="text-2xl  mb-4 text-white  kalnia-font">
                         Education
                     </h1>
                     <SectionItem
@@ -62,7 +63,7 @@ const Experience = () => (
                 </div>
 
                 <div>
-                    <h1 className="text-4xl font-medium mb-4 text-white kalnia-font">
+                    <h1 className="text-2xl font-medium mb-4 text-white kalnia-font">
                         Experience
                     </h1>
                     <SectionItem

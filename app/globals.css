@@ -73,5 +73,18 @@ h6 {
 }
 
 .relative .group:hover .bg-grayText {
-    background-color: #8B5CF6; /* Purple color */
+    background-color: #8b5cf6; /* Purple color */
 }
+
+.border-linearWhiteStroke {
+    border: 1px solid white;
+    position: relative;
+    border-radius: 7px;
+}
+
+/* 
+background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+
+
+*/
