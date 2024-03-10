@@ -10,8 +10,8 @@ import { useRef } from "react"
 
 const Model = () => {
     return (
-        <Canvas id="canvas" className="basis-1/3">
-            <OrbitControls enableZoom={false} enablePan={false} />
+        <Canvas id="canvas" className="basis-2/3 h-full ">
+            {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
             <directionalLight intensity={3} position={[0, 3, 2]} />
             <Environment preset="warehouse" />
             <Object />
@@ -39,11 +39,11 @@ const Object = () => {
 
     return (
         <group>
-            {/* <Text fontSize={2} font="" position={[0, 0, -4.5]}>
-                Hello World
-            </Text> */}
+            <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
+                &lt;/&gt;
+            </Text>
             <mesh ref={mesh}>
-                <tetrahedronGeometry args={[3, 0]} />
+                <tetrahedronGeometry args={[2, 0]} />
                 <MeshTransmissionMaterial color={"silver"} {...materialProps} />
             </mesh>
         </group>
