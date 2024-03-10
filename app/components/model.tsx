@@ -13,7 +13,7 @@ const Model = () => {
         <Canvas id="canvas" className="basis-2/3 h-full ">
             {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
             <directionalLight intensity={3} position={[0, 3, 2]} />
-            <Environment preset="warehouse" />
+            <Environment preset="studio" />
             <Object />
         </Canvas>
     )
@@ -29,8 +29,8 @@ const Object = () => {
     })
 
     const materialProps = useControls({
-        thickness: { value: 0.8, min: 0, max: 3, step: 0.05 },
-        roughness: { value: 0.2, min: 0, max: 1, step: 0.1 },
+        thickness: { value: 0.6, min: 0, max: 3, step: 0.05 },
+        roughness: { value: 0.0, min: 0, max: 1, step: 0.1 },
         transmission: { value: 1, min: 0, max: 1, step: 0.1 },
         ior: { value: 1.7, min: 0, max: 3, step: 0.1 },
         chromaticAberration: { value: 1, min: 0, max: 1 },
@@ -43,7 +43,7 @@ const Object = () => {
                 &lt;/&gt;
             </Text>
             <mesh ref={mesh}>
-                <tetrahedronGeometry args={[2, 0]} />
+                <tetrahedronGeometry args={[3, 0]} />
                 <MeshTransmissionMaterial color={"silver"} {...materialProps} />
             </mesh>
         </group>
