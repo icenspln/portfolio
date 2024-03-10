@@ -1,9 +1,21 @@
+"use client"
+
+import { Canvas, useFrame } from "@react-three/fiber"
+import { useEffect, useRef } from "react"
+import * as THREE from "three"
+import { Environment, OrbitControls, Text } from "@react-three/drei"
+import dynamic from "next/dynamic"
+
+const Model = dynamic(() => import("./model"), {
+    ssr: false, // This disables server-side rendering for this component
+})
+
 export default function Intro() {
     return (
         <div className="into into--custom-height flex items-center relative">
             <article className="w-full flex flex-col lg:flex-row gap-5 items-center  justify-between">
-                <div className="w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center lg:text-left w-full text-white">
+                <div className="basis-1/3 w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
+                    <h1 className="text-4xl sm:text-5xl  text-center lg:text-left w-full text-white">
                         Merouane Boukandoura.
                     </h1>
                     <div className="h-2 w-11 bg-gradientPurple rounded"></div>
@@ -15,12 +27,8 @@ export default function Intro() {
                         <img src="/instagram-icon.svg" alt="" />
                     </div>
                 </div>
-                <img
-                    className="intro--main-pic hidden lg:block lg:w-[700px] xl:w-[800px]"
-                    src={"/mainPic.svg"}
-                    alt="me"
-                />
-                <div className="max-w-full md:w-96 text-center lg:text-start">
+                <Model />
+                <div className="basis-1/3 text-center lg:text-start">
                     <h2 className="text-xl text-white">
                         Backend & Mobile developer
                     </h2>
@@ -38,15 +46,15 @@ export default function Intro() {
                         Massa id elementum porttitor suspendisse.
                     </p>
 
-                    <div className="flex gap-5 items-center my-5 justify-center lg:justify-normal">
-                        <a href="">
+                    <div className="flex gap-5 items-center my-5 justify-center lg:justify-normal ">
+                        <a href="#" className="z-10">
                             <button className="bg-gradientPurple text-white px-3.5 py-1 rounded-2xl">
                                 DOWNLOAD CV
                             </button>
                         </a>
                         <a
                             href=""
-                            className="gradient-text-purple relative before:absolute before:left-0 before:-bottom-[0.3px] before:w-full before:h-px before:bg-gradientPurple h-fit"
+                            className="z-10 gradient-text-purple relative before:absolute before:left-0 before:-bottom-[0.3px] before:w-full before:h-px before:bg-gradientPurple h-fit"
                         >
                             START A PROJECT
                         </a>
@@ -54,9 +62,6 @@ export default function Intro() {
                     </div>
                 </div>
             </article>
-            <div className="hidden md:block intro--scroll-down text-grayText border-grayText slide-in-blurred-bottom">
-                scroll down
-            </div>
         </div>
     )
 }

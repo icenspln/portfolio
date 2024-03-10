@@ -1,6 +1,6 @@
 import { Metadata } from "next"
+import dynamic from "next/dynamic"
 
-// These styles apply to every route in the application and we only have one i guess.
 import "./globals.css"
 import "./animista.css"
 export const metadata: Metadata = {

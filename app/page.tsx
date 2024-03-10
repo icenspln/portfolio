@@ -1,10 +1,9 @@
-import Intro from "./intro"
-import Navbar from "./navbar"
-import Testimonials from "./testimonials"
-import FormAnimation from "./form"
-import Experience from "./experience"
+import Navbar from "./components/navbar"
+import FormAnimation from "./components/form"
+import Experience from "./components/experience"
+import Cont from "./components/cont"
+import Intro from "./components/intro"
 
-import Cont from "./cont"
 export default function Page() {
     return (
         <>
