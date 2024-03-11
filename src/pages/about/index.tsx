@@ -1,6 +1,5 @@
 import React from "react"
-import Cont from "./cont"
-import Image from "next/image"
+import Cont from "../components/cont"
 
 type CardTypes = {
     title: string
@@ -30,7 +29,7 @@ const SectionItem = ({ title, description }: SectionItemTypes) => (
     </div>
 )
 
-const Experience = () => (
+const About = () => (
     <div
         className="flex flex-col items-center justify-start py-20" // give the same vertical padding to all sections
         style={{
@@ -96,4 +95,4 @@ const Experience = () => (
     </div>
 )
 
-export default Experience
+export default About

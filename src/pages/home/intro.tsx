@@ -1,9 +1,4 @@
 "use client"
-
-import { Canvas, useFrame } from "@react-three/fiber"
-import { useEffect, useRef } from "react"
-import * as THREE from "three"
-import { Environment, OrbitControls, Text } from "@react-three/drei"
 import dynamic from "next/dynamic"
 
 const Model = dynamic(() => import("./model"), {
