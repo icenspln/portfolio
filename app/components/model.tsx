@@ -7,6 +7,8 @@ import {
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useControls } from "leva"
 import { useRef } from "react"
+import { motion } from "framer-motion-3d"
+import { AnimatePresence } from "framer-motion"
 
 const Model = () => {
     return (
@@ -30,7 +32,7 @@ const Object = () => {
 
     const materialProps = useControls({
         thickness: { value: 0.6, min: 0, max: 3, step: 0.05 },
-        roughness: { value: 0.0, min: 0, max: 1, step: 0.1 },
+        roughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
         transmission: { value: 1, min: 0, max: 1, step: 0.1 },
         ior: { value: 1.7, min: 0, max: 3, step: 0.1 },
         chromaticAberration: { value: 1, min: 0, max: 1 },
@@ -38,7 +40,7 @@ const Object = () => {
     })
 
     return (
-        <group>
+        <motion.group>
             <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
                 &lt;/&gt;
             </Text>
@@ -46,7 +48,7 @@ const Object = () => {
                 <tetrahedronGeometry args={[3, 0]} />
                 <MeshTransmissionMaterial color={"silver"} {...materialProps} />
             </mesh>
-        </group>
+        </motion.group>
     )
 }
 
