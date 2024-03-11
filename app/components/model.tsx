@@ -1,14 +1,8 @@
-import {
-    Environment,
-    MeshTransmissionMaterial,
-    OrbitControls,
-    Text,
-} from "@react-three/drei"
+import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useControls } from "leva"
 import { useRef } from "react"
 import { motion } from "framer-motion-3d"
-import { AnimatePresence } from "framer-motion"
 
 const Model = () => {
     return (

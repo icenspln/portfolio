@@ -1,5 +1,5 @@
 import React from "react"
-import "./Testimonials.css"
+import "../css/Testimonials.css"
 
 const Testimonials = () => {
     const renderCard = (

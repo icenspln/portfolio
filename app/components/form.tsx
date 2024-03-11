@@ -4,7 +4,7 @@ import { throttle } from "lodash"
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import "./form.css"
+import "../css/form.css"
 
 const FormAnimation = () => {
     const [mousePosition, setMousePosition] = useState({
