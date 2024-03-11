@@ -56,7 +56,7 @@ const FormAnimation = () => {
             <h1 className="title">
                 <span className="text-white flex items-center">
                     <span className="mr-6">{"GET IN"}</span>
-                    <Image src="/arrow.svg" alt="" />
+                    <img src="/arrow.svg" />
                 </span>
                 <span className="text-grey ">&lt;/TOUCH</span>
             </h1>
