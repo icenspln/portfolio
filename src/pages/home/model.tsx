@@ -38,10 +38,14 @@ const Object = () => {
             <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
                 &lt;/&gt;
             </Text>
-            <mesh ref={mesh}>
+            <motion.mesh
+                ref={mesh}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+            >
                 <tetrahedronGeometry args={[3, 0]} />
                 <MeshTransmissionMaterial color={"silver"} {...materialProps} />
-            </mesh>
+            </motion.mesh>
         </motion.group>
     )
 }

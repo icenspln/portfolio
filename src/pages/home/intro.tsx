@@ -42,14 +42,14 @@ export default function Intro() {
                     </p>
 
                     <div className="flex gap-5 items-center my-5 justify-center lg:justify-normal ">
-                        <a href="#" className="z-10">
+                        <a href="#" className="">
                             <button className="bg-gradientPurple text-white px-3.5 py-1 rounded-2xl">
                                 DOWNLOAD CV
                             </button>
                         </a>
                         <a
                             href=""
-                            className="z-10 gradient-text-purple relative before:absolute before:left-0 before:-bottom-[0.3px] before:w-full before:h-px before:bg-gradientPurple h-fit"
+                            className="gradient-text-purple relative before:absolute before:left-0 before:-bottom-[0.3px] before:w-full before:h-px before:bg-gradientPurple h-fit"
                         >
                             START A PROJECT
                         </a>

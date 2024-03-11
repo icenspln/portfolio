@@ -5,6 +5,7 @@ import { throttle } from "lodash"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Inner from "@/components/Layout/Inner"
 
 const FormAnimation = () => {
     const [mousePosition, setMousePosition] = useState({
@@ -135,25 +136,24 @@ const Form = () => {
     }
 
     return (
-        // <div onClick={handleClick}>
-        //     {currentPage === "form" && <FormAnimation />}
-        //     {currentPage === "secondPage" && <SecondPage />}
-        // </div>
-
-        <div onClick={handleClick}>
-            <motion.div
-                variants={slideVariants}
-                animate={currentPage === "form" ? "visible" : "hidden"}
-            >
-                {currentPage === "form" && <FormAnimation />}
-            </motion.div>
-            <motion.div
-                variants={slideVariants}
-                animate={currentPage === "secondPage" ? "visible" : "hidden"}
-            >
-                {currentPage === "secondPage" && <SecondPage />}
-            </motion.div>
-        </div>
+        <Inner>
+            <div onClick={handleClick}>
+                <motion.div
+                    variants={slideVariants}
+                    animate={currentPage === "form" ? "visible" : "hidden"}
+                >
+                    {currentPage === "form" && <FormAnimation />}
+                </motion.div>
+                <motion.div
+                    variants={slideVariants}
+                    animate={
+                        currentPage === "secondPage" ? "visible" : "hidden"
+                    }
+                >
+                    {currentPage === "secondPage" && <SecondPage />}
+                </motion.div>
+            </div>
+        </Inner>
     )
 }
 export default Form
