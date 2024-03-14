@@ -1,20 +1,19 @@
+import Link from "next/link"
+
 const Navbar = () => {
     return (
         <nav className="hidden md:block my-4 text-grayText">
             <ul className="flex gap-5 w-full justify-center text-base">
                 <li>
-                    <a href="#" className="text-white">
-                        portfolio
-                    </a>
+                    <Link href="#" className="text-white">
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">tech</a>
+                    <Link href="#">About</Link>
                 </li>
                 <li>
-                    <a href="#">testimonials</a>
-                </li>
-                <li>
-                    <a href="#">contact</a>
+                    <Link href="#">contact</Link>
                 </li>
             </ul>
         </nav>

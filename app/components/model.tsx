@@ -24,23 +24,27 @@ const Object = () => {
         mesh.current.rotation.z += delta * 0.2
     })
 
-    const materialProps = useControls({
-        thickness: { value: 0.6, min: 0, max: 3, step: 0.05 },
-        roughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
-        transmission: { value: 1, min: 0, max: 1, step: 0.1 },
-        ior: { value: 1.7, min: 0, max: 3, step: 0.1 },
-        chromaticAberration: { value: 1, min: 0, max: 1 },
-        backside: { value: true },
-    })
+    // const materialProps = useControls({
+    //     thickness: { value: 0.6, min: 0, max: 3, step: 0.05 },
+    //     roughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
+    //     transmission: { value: 1, min: 0, max: 1, step: 0.1 },
+    //     ior: { value: 1.7, min: 0, max: 3, step: 0.1 },
+    //     chromaticAberration: { value: 1, min: 0, max: 1 },
+    //     backside: { value: true },
+    // })
 
     return (
         <motion.group>
-            <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
+            {/* <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
                 &lt;/&gt;
-            </Text>
+            </Text> */}
             <mesh ref={mesh}>
-                <tetrahedronGeometry args={[3, 0]} />
-                <MeshTransmissionMaterial color={"silver"} {...materialProps} />
+                <tetrahedronGeometry args={[2, 0]} />
+                <meshBasicMaterial
+                    wireframe
+                    color={"silver"}
+                    // {...materialProps}
+                />
             </mesh>
         </motion.group>
     )

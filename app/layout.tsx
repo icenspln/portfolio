@@ -1,7 +1,7 @@
 import { Metadata } from "next"
-
 import "./css/globals.css"
 import "./css/animista.css"
+
 export const metadata: Metadata = {
     title: "PORTFOLIO",
     description:

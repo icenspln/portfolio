@@ -10,7 +10,7 @@ const Model = dynamic(() => import("./model"), {
     ssr: false, // This disables server-side rendering for this component
 })
 
-export default function Intro() {
+export default function Home() {
     return (
         <div className="into into--custom-height flex items-center relative">
             <article className="w-full flex flex-col lg:flex-row gap-5 items-center  justify-between">
@@ -18,14 +18,14 @@ export default function Intro() {
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl  text-center lg:text-left w-full text-white">
                         Merouane Boukandoura.
                     </h1>
-                    <div className="h-2 w-11 bg-gradientPurple rounded"></div>
+                    {/* <div className="h-2 w-11 bg-gradientPurple rounded"></div>
 
                     <div className="flex items-center justify-start gap-3">
                         <img src="/github-icon.svg" alt="" />
                         <img src="/email-icon.svg" alt="" />
                         <img src="/facebook-icon.svg" alt="" />
                         <img src="/instagram-icon.svg" alt="" />
-                    </div>
+                    </div> */}
                 </div>
                 <Model />
                 <div className="basis-1/3 text-center lg:text-start">
