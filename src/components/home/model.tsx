@@ -17,7 +17,7 @@ import {
 
 const Model = () => {
     return (
-        <Canvas id="canvas" className="basis-2/3 h-full ">
+        <Canvas id="canvas" className="basis-1/3 h-full ">
             <OrbitControls enableZoom={false} enablePan={false} />
             <directionalLight intensity={3} position={[0, 3, 2]} />
             <Environment preset="studio" />
