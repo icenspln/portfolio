@@ -2,11 +2,7 @@ import { ReactElement, ReactNode } from "react"
 import { motion } from "framer-motion"
 import Navbar from "@/components/navbar"
 
-type InnerProps = {
-    children: ReactElement
-}
-
-export default function Inner({ children }: InnerProps) {
+export default function Inner({ children }: { children: React.ReactNode }) {
     const anim = (variants: any) => {
         return {
             initial: "initial",
@@ -65,10 +61,7 @@ export default function Inner({ children }: InnerProps) {
             <motion.div {...anim(slide)} className="slide" />
 
             <motion.div {...anim(perspective)} className="page">
-                <motion.div {...anim(opacity)}>
-                    <Navbar />
-                    {children}
-                </motion.div>
+                <motion.div {...anim(opacity)}>{children}</motion.div>
             </motion.div>
         </div>
     )

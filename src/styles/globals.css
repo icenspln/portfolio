@@ -88,6 +88,10 @@ background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 */
 
+#canvas {
+    height: 100vh;
+}
+
 /* #canvas {
     position: absolute !important;
     top: 0 !important;
@@ -112,7 +116,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 1
 @media (min-width: 1024px) {
     #canvas {
         display: block;
-        width: 50vw !important;
+        width: 100vw !important;
         height: calc(100vh - 63px) !important;
     }
 } */

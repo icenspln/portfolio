@@ -123,7 +123,7 @@ const SecondPage = () => {
         </div>
     )
 }
-const Form = () => {
+const Contact = () => {
     const [currentPage, setCurrentPage] = useState("form")
 
     const handleClick = () => {
@@ -156,4 +156,4 @@ const Form = () => {
         </Inner>
     )
 }
-export default Form
+export default Contact

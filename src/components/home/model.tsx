@@ -1,14 +1,24 @@
-import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei"
+import {
+    Environment,
+    MeshReflectorMaterial,
+    MeshTransmissionMaterial,
+    OrbitControls,
+    Text,
+} from "@react-three/drei"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useControls } from "leva"
 import { useRef } from "react"
 import { motion } from "framer-motion-3d"
-import { MeshStandardMaterial } from "three"
+import {
+    ConeGeometry,
+    CubeReflectionMapping,
+    MeshStandardMaterial,
+} from "three"
 
 const Model = () => {
     return (
         <Canvas id="canvas" className="basis-2/3 h-full ">
-            {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
+            <OrbitControls enableZoom={false} enablePan={false} />
             <directionalLight intensity={3} position={[0, 3, 2]} />
             <Environment preset="studio" />
             <Object />
@@ -36,15 +46,15 @@ const Object = () => {
 
     return (
         <motion.group>
-            <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
+            {/* <Text fontSize={0.5} font="" position={[0, 0, -4.5]}>
                 &lt;/&gt;
-            </Text>
+            </Text> */}
             <motion.mesh
                 ref={mesh}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
             >
-                <tetrahedronGeometry args={[3, 0]} />
+                <coneGeometry args={[2, 3, 3]} />
                 <meshStandardMaterial
                     wireframe
                     color={"silver"}

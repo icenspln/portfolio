@@ -1,5 +1,5 @@
 import React from "react"
-import Cont from "../../components/cont"
+import Cont from "../cont"
 import Inner from "@/components/Layout/Inner"
 
 type CardTypes = {
