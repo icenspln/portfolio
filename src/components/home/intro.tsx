@@ -1,14 +1,45 @@
 "use client"
 import dynamic from "next/dynamic"
-import Image from "next/image"
+// import Image from "next/image"
+import { easeInOut, easeOut, motion } from "framer-motion"
 
 const Model = dynamic(() => import("./model"), {
     ssr: false, // This disables server-side rendering for this component
 })
 
 export default function Intro() {
+    const opacitySun1 = {
+        enter: {
+            opacity: 0,
+            y: 10,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                delay: 0.2,
+                ease: easeOut,
+            },
+            y: 0,
+        },
+    }
+
+    const opacitySun2 = {
+        enter: {
+            opacity: 0,
+            y: 40,
+            scale: 0.5,
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                ease: easeOut,
+            },
+            scale: 1,
+        },
+    }
     return (
-        <div className="into into--custom-height  flex items-center relative">
+        <div className="into into--custom-height   flex items-center relative">
             <article className="w-full flex flex-col lg:flex-row gap-5 items-center  justify-between my-[300px]">
                 <div className="basis-1/3 w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
                     <h1 className="font-mono  text-4xl sm:text-5xl lg:text-6xl font-normal  text-center lg:text-left w-full text-white">
@@ -56,6 +87,27 @@ export default function Intro() {
                         </a>
                         {/* <div className="w-full h-0.5 bg-gradientPurple absolute top-5"></div> */}
                     </div>
+                </div>
+            </article>
+            <article>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+                    <motion.img
+                        variants={opacitySun2}
+                        initial={"enter"}
+                        animate={"animate"}
+                        exit={"exit"}
+                        src="/sun2.svg"
+                        alt=""
+                    />
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+                    <motion.img
+                        variants={opacitySun1}
+                        initial={"enter"}
+                        animate={"animate"}
+                        src="/sun1.svg"
+                        alt=""
+                    />
                 </div>
             </article>
         </div>
