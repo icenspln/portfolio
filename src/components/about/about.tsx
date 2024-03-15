@@ -40,6 +40,7 @@ const About = () => (
             }}
         >
             <Cont>
+                {/* <h1 className="text-white text-3xl text-center mb-8">About</h1> */}
                 <div className="flex justify-center flex-wrap">
                     <Card title="Successful Projects" number={30} />
                     <Card title="Years of Experience" number={4} />

@@ -1,5 +1,6 @@
 "use client"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 
 const Model = dynamic(() => import("./model"), {
     ssr: false, // This disables server-side rendering for this component
@@ -7,7 +8,7 @@ const Model = dynamic(() => import("./model"), {
 
 export default function Intro() {
     return (
-        <div className="into  flex items-center relative">
+        <div className="into into--custom-height  flex items-center relative">
             <article className="w-full flex flex-col lg:flex-row gap-5 items-center  justify-between my-[300px]">
                 <div className="basis-1/3 w-lg max-w-lg flex flex-col gap-4 lg:gap-7 items-center lg:items-start">
                     <h1 className="font-mono  text-4xl sm:text-5xl lg:text-6xl font-normal  text-center lg:text-left w-full text-white">
