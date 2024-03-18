@@ -1,0 +1,27 @@
+.slider--container {
+    position: absolute;
+}
+
+.slider--container--1 {
+    top: -324px;
+}
+.slider--container--2 {
+    position: absolute;
+    top: 30px;
+}
+.slider {
+    position: relative;
+}
+
+.slider h1 {
+    background-color: #111111;
+}
+
+.slider h1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+/* .slider h1:first-child {
+    position: absolute;
+} */

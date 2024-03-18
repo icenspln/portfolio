@@ -8,6 +8,7 @@ import Inner from "@/components/Layout/Inner"
 import About from "../components/about/about"
 import Contact from "../components/contact/contact"
 import { Work } from "@/components/work/work"
+import { Slider } from "@/components/slider/slider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,6 +21,7 @@ export default function Home() {
                 {/* <Work /> */}
             </Cont>
             <About />
+            <Slider />
             <Contact />
         </Inner>
     )
