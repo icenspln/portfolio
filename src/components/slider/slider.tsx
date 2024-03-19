@@ -15,6 +15,9 @@ export function Slider() {
     let xPercent = 0
     let direction = 1
 
+    let xPercent2 = 0
+    let direction2 = -1
+
     useEffect(() => {
         requestAnimationFrame(animation)
         requestAnimationFrame(animation2)
@@ -29,19 +32,20 @@ export function Slider() {
         }
         gsap.set(firstText.current, { xPercent: xPercent })
         gsap.set(secoundText.current, { xPercent: xPercent })
-        xPercent += 0.06 * direction
+        xPercent += 0.04 * direction
         requestAnimationFrame(animation)
     }
+
     const animation2 = () => {
-        if (xPercent <= -100) {
-            xPercent = 0
+        if (xPercent2 <= -100) {
+            xPercent2 = 0
         }
-        if (xPercent > 0) {
-            xPercent = -100
+        if (xPercent2 > 0) {
+            xPercent2 = -100
         }
-        gsap.set(firstText2.current, { xPercent: xPercent })
-        gsap.set(secoundText2.current, { xPercent: xPercent })
-        xPercent += 0.06 * direction
+        gsap.set(firstText2.current, { xPercent: xPercent2 })
+        gsap.set(secoundText2.current, { xPercent: xPercent2 })
+        xPercent2 += 0.04 * direction2
         requestAnimationFrame(animation2)
     }
 
@@ -69,14 +73,16 @@ export function Slider() {
                 <div className="slider" ref={slider2}>
                     <h1
                         ref={firstText2}
-                        className="text-white bg-gradientPurple text-8xl text-nowrap whitespace-nowrap "
+                        style={{ backgroundColor: "#C172FF" }}
+                        className="text-white bg-purple text-8xl text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
                     </h1>
                     <h1
                         ref={secoundText2}
-                        className="text-white bg-gradientPurple text-8xl text-nowrap whitespace-nowrap "
+                        style={{ backgroundColor: "#C172FF" }}
+                        className="text-white bg-purple text-8xl text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
