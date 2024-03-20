@@ -3,11 +3,11 @@
 }
 
 .slider--container--1 {
-    top: -324px;
+    top: -224px;
 }
 .slider--container--2 {
     position: absolute;
-    top: 30px;
+    top: 165px;
 }
 .slider {
     position: relative;
@@ -15,12 +15,18 @@
 
 .slider h1 {
     background-color: #111111;
+    box-shadow:
+        rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .slider h1:nth-child(2) {
     position: absolute;
     top: 0;
     left: 100%;
+    box-shadow:
+        rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 /* .slider h1:first-child {
     position: absolute;

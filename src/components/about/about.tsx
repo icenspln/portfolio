@@ -33,7 +33,7 @@ const SectionItem = ({ title, description }: SectionItemTypes) => (
 const About = () => (
     <Inner>
         <div
-            className="flex flex-col items-center justify-start py-20 pb-64" // give the same vertical padding to all sections
+            className="flex flex-col items-center justify-start py-20 pb-40" // give the same vertical padding to all sections
             style={{
                 background:
                     "linear-gradient(103.02deg, #2E2E2E 0%, #222222 81.17%)", // bro.. we have tailwind...

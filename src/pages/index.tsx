@@ -18,10 +18,10 @@ export default function Home() {
             <Cont>
                 <Navbar />
                 <Intro />
-                {/* <Work /> */}
             </Cont>
             <About />
             <Slider />
+            <Work />
             <Contact />
         </Inner>
     )

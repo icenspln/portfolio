@@ -21,6 +21,7 @@ export function Slider() {
     useEffect(() => {
         requestAnimationFrame(animation)
         requestAnimationFrame(animation2)
+        // eslint-disable-next-line
     }, [])
 
     const animation = () => {
@@ -51,30 +52,30 @@ export function Slider() {
 
     return (
         <div className="relative ">
-            <div className="slider--container slider--container--1  -rotate-6">
+            <div className="slider--container slider--container--1  -rotate-[4deg]">
                 <div className="slider" ref={slider}>
                     <h1
                         ref={firstText}
-                        className="text-white text-8xl text-nowrap whitespace-nowrap "
+                        className="text-white text-9xl py-2 text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
                     </h1>
                     <h1
                         ref={secoundText}
-                        className="text-white text-8xl text-nowrap whitespace-nowrap "
+                        className="text-white text-9xl py-2 text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
                     </h1>
                 </div>
             </div>
-            <div className="slider--container slider--container--2  rotate-6">
+            <div className="slider--container slider--container--2   rotate-[4deg]">
                 <div className="slider" ref={slider2}>
                     <h1
                         ref={firstText2}
                         style={{ backgroundColor: "#C172FF" }}
-                        className="text-white bg-purple text-8xl text-nowrap whitespace-nowrap "
+                        className="text-white bg-purple py-2 text-9xl text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
@@ -82,7 +83,7 @@ export function Slider() {
                     <h1
                         ref={secoundText2}
                         style={{ backgroundColor: "#C172FF" }}
-                        className="text-white bg-purple text-8xl text-nowrap whitespace-nowrap "
+                        className="text-white bg-purple py-2 text-9xl text-nowrap whitespace-nowrap "
                     >
                         ARTIFICIAL INTELLIGENCE / MOBILE DEVELOPMENT &lt;/&gt;
                         WEB DEVELOPMENT / BACKEND DEVELOPMENT -
